@@ -40,8 +40,6 @@ public class TextButton {
     }
 
     public boolean isHit(int tx, int ty) {
-        System.out.println(tx + " - " + ty);
-        System.out.println(x + " - " + y);
         return tx >= x && tx <= x + buttonWidth
                 && ty >= y && ty <= y + buttonHeight;
     }

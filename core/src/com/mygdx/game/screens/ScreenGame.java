@@ -65,18 +65,15 @@ public class ScreenGame implements Screen {
         background.move();
         bird.fly();
         if (!bird.isInField()) {
-            System.out.println("not in field");
             isGameOver = true;
         }
         for (Tube tube : tubes) {
             tube.move();
             if (tube.isHit(bird)) {
                 isGameOver = true;
-                System.out.println("hit");
             } else if (tube.needAddPoint(bird)) {
                 gamePoints += 1;
                 tube.setPointReceived();
-                System.out.println(gamePoints);
             }
         }
 
